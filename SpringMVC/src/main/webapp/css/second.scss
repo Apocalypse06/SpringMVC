@@ -1,0 +1,434 @@
+$background:firebrick;
+$color:#fff; //white;
+$footer-height: 3rem;
+$nav-bar-height: 11.25em;
+$main-color: #F9F5E9;
+$border-color: #E3DFD0;
+$hover-color: #6B403F;
+$nav-bar-color: #03205A;
+$font-family:'微軟正黑體';
+$border:#dbdada;
+
+@import url(temp.css);
+
+#classification {
+    text-align: left;
+    background: $background;
+    color: $color;
+    padding: 0 1em;
+    font-size: 18px;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    font-family: $font-family;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#imformation {
+    padding: 1em;
+    border: 1px gray solid;
+    display: flex;
+    #graphic {
+        margin: 1em 2em;
+        width: 28em;
+        border: 1px gray solid;
+        height: 40em;
+
+
+    }
+
+    #info {
+        width: 57%;
+        margin: 1em 0em 1em 0em;
+        height: 40em;
+        border: 1px gray solid; //        display: flex;
+        justify-content: space-around;
+        #toptop {
+            border: 1px gray solid;
+            display: flex;
+            #intro {
+                width: 20em;
+                height: 22em;
+
+                border: 1px gray solid;
+
+            }
+            #top {
+                width: 22em;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                border: 1px gray solid;
+                height: 22em;
+
+                .rating-box {
+                    -webkit-border-radius: 2px;
+                    border-radius: 2px;
+                    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 50px;
+                    white-space: nowrap;
+                    display: block;
+                    width: 22em;
+
+                    margin-top: 15px;
+                    vertical-align: top;
+                    float: left;
+                    border: 1px gray solid;
+                    .reviewers-stats {
+                        .reviewers-small {
+                            top: 3px
+                        }
+
+                    }
+                    .rating-bar-container {
+
+                        margin-bottom: 2px;
+                    }
+                    .score-container,
+                    .rating-histogram {
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-left: 1.5em;
+                    }
+                    .score-container {
+                        padding: 20px;
+                        text-align: center;
+                        width: 100px;
+                        .score {
+                            color: #333;
+                            font-size: 64px;
+                            font-weight: 100;
+                            line-height: 64px;
+                        }
+                        .reviews-stats {
+                            color: #8d8d8d;
+                        }
+                        &-star-rating {
+                            height: 24px;
+                            margin: 0 0 8px 2px;
+                        }
+                    }
+                    .rating-histogram {
+                        width: 160px;
+                        padding: 7.5px 10px 7.5px 15px;
+                    }
+                    .rating-bar-container {
+                        color: #737373;
+                        height: 23px;
+                        font-weight: 400;
+                        position: relative;
+                        width: 100%;
+                        .bar {
+                            opacity: .8;
+                            filter: alpha(opacity=80);
+                            -webkit-transition: width .25s ease;
+                            transition: width .25s ease;
+                            display: inline-block;
+                            height: 100%
+                        }
+                        &.five .bar {
+                            background: #88b131
+                        }
+                        &.four .bar {
+                            background: #99cc00
+                        }
+                        &.three .bar {
+                            background: #ffcf02
+                        }
+                        &.two .bar {
+                            background: #ff9f02
+                        }
+                        &.one .bar {
+                            background: #ff6f31
+                        }
+                    }
+                    .bar-label {
+                        font-size: 13px;
+                        left: -14px;
+                        letter-spacing: 1px;
+                        position: absolute;
+                        top: 4px;
+                    }
+                    .bar-number {
+                        color: #333;
+                        font-size: 13px;
+                        left: 2.5px;
+                        position: absolute;
+                        top: 4px;
+                    }
+                }
+                /****** Style Star Rating Widget *****/
+                .rating {
+                    //                    border: 1px solid red;
+                    text-align: left;
+
+                }
+
+                .rating > input {
+                    display: none;
+                }
+                .rating > label:before {
+                    margin: 5px;
+                    font-size: 1.25em;
+                    font-family: FontAwesome;
+                    display: inline-block;
+                    content: "\f005";
+                }
+
+                .rating > .half:before {
+                    content: "\f089";
+                    position: absolute;
+                }
+
+                .rating > label {
+                    color: #ddd;
+                    float: right;
+                }
+
+                /***** CSS Magic to Highlight Stars on Hover *****/
+                .rating > input:checked ~ label,
+                /* show gold star when clicked */
+                .rating:not(:checked) > label:hover,
+                /* hover current star */
+                .rating:not(:checked) > label:hover ~ label {
+                    color: #FFD700;
+                }
+                /* hover previous stars in list */
+                .rating > input:checked + label:hover,
+                /* hover current star when changing rating */
+                .rating > input:checked ~ label:hover,
+                .rating > label:hover ~ input:checked ~ label,
+                /* lighten current selection */
+                .rating > input:checked ~ label:hover ~ label {
+                    color: #FFED85;
+                }
+
+            }
+        }
+
+        #buttons {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 18em;
+            border: 1px gray solid;
+            a {
+                height: 80px;
+                width: 200px;
+
+                margin: 20px;
+            }
+
+
+            .button {
+                font-family: $font-family;
+                border: 1px solid red;
+                background: transparent;
+                height: 100%;
+                width: 100%;
+
+                color: firebrick;
+                font-weight: 800;
+                font-size: 26px;
+
+                text-align: center;
+                line-height: 80px;
+
+            }
+        }
+    }
+
+}
+
+#tab {
+
+    .nav {
+        height: 5em;
+
+        border: 1px solid $border;
+
+        li {}
+        a {
+            &:hover {
+                background: $background;
+                color: $color;
+
+            }
+            color: firebrick;
+            font-size: 18px;
+            padding: 20px 25px;
+        }
+    }
+}
+
+
+
+#chapter {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 5em 0;
+    border-left: 1px $border solid;
+    border-right: 1px $border solid;
+    #volume {
+        width: 100%;
+    }
+    a {
+        width: 5em;
+        font-size: 1em;
+        margin: 0.5em;
+    }
+
+}
+
+#comment-area {
+    width: 100%;
+    border: 1px solid $border;
+
+
+
+    #comment-title {
+        font-family: $font-family;
+        text-align: left;
+        background: $background;
+        color: $color;
+        padding: 0 1em;
+        font-size: 18px;
+        height: 2.5em;
+        display: flex;
+        align-items: center;
+
+    }
+    .comment {
+        width: 100%;
+        padding: 2em; //        height: auto;
+        .bao {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            .left {
+                height: 12em;
+                width: 20%;
+                text-align: center; //border: 1px solid black;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin-top: 2em;
+                    height: 8em;
+                    width: 8em;
+                    border: 1px solid blue;
+
+                }
+            }
+            .right {
+                min-height: 12em;
+                width: 80%; //border: 1px solid gray;
+                .report {}
+                .text {
+                    height: 10em;
+                    width: 100%;
+
+                    border: 1px solid black;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+            }
+        }
+        #more-text-in {
+            width: 80%;
+            float: right;
+           
+            #put {
+                width: 100%;
+                min-height: 6em;
+                margin: 1em 0em 1em 0em;
+                border: 1px solid gray;
+            }
+            a {
+                
+                font-size: 18px;
+//                height: 2.5em;
+                padding: 0 1em;
+                color: firebrick;
+                background: $border-color;
+                float: right;
+
+            }
+        }
+        .more {
+            min-height: 10em;
+            width: 80%;
+            float: right; //border: 1px solid black;
+            display: flex;
+
+            .sub-left {
+                height: 12em;
+                text-align: center;
+                width: 18%;
+                img {
+                    margin-top: 3em;
+                    height: 6em;
+                    width: 6em;
+                    border: 1px solid blue;
+
+                }
+            }
+            .sub-right {
+                width: 82%;
+                .sub-text {
+                    height: 10em;
+                    width: 100%;
+
+                    border: 1px solid black;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+            }
+        }
+
+    }
+
+}
+
+.clear {
+    clear: both;
+}
+
+#wanna-say {
+    margin-left: 10%;
+    width: 80%; //    border: 1px solid gray;
+    #put {
+        width: 100%;
+        height: 8em;
+        margin: 1em 0em 1em 0em;
+        border: 1px solid gray;
+    }
+    #offer {
+        float: right;
+        a {
+            font-size: 18px;
+            height: 2.5em;
+            padding: 0 1em;
+            color: firebrick;
+            background: $border-color;
+
+        }
+    }
+
+}
+
+textarea {
+    resize: none;
+}

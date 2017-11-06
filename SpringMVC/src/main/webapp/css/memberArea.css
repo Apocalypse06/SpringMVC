@@ -1,0 +1,251 @@
+body {
+  position: relative;
+  padding: 0;
+  background-color: #fff; }
+
+footer {
+  position: static; }
+
+.outBox {
+  width: 100%;
+  height: auto;
+  display: flex; }
+
+.box-left {
+  width: 20em;
+  background-color: #811717; }
+  .box-left ul {
+    padding-top: 0em; }
+  .box-left .tab-title {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2em;
+    color: #1d0106;
+    text-align: center;
+    line-height: 3em; }
+  .box-left .tab {
+    width: 100%;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 4em;
+    transition: 0.4s; }
+    .box-left .tab:hover {
+      background-color: #f8d5d5;
+      color: firebrick; }
+
+.box-right {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: relative; }
+  .box-right .member-info {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    height: 100%; }
+    .box-right .member-info .center-box {
+      padding: 2em;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0 auto;
+      width: 30em; }
+      .box-right .member-info .center-box .member-title {
+        text-align: center;
+        color: #a8a8a8;
+        font-size: 2em;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 0.5px solid #a8a8a8; }
+      .box-right .member-info .center-box .input-box {
+        display: flex;
+        flex-wrap: wrap; }
+        .box-right .member-info .center-box .input-box label {
+          width: 5em;
+          text-align: right;
+          padding-right: 1em; }
+        .box-right .member-info .center-box .input-box .input-style {
+          border: 0.5px solid #a8a8a8;
+          width: 19em;
+          padding: 8px 20px;
+          margin: 8px 0;
+          box-sizing: border-box; }
+        .box-right .member-info .center-box .input-box ::-webkit-input-placeholder {
+          /* Chrome */
+          color: #a8a8a8; }
+        .box-right .member-info .center-box .input-box :-ms-input-placeholder {
+          /* IE 10+ */
+          color: #a8a8a8; }
+        .box-right .member-info .center-box .input-box ::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #a8a8a8;
+          opacity: 1; }
+        .box-right .member-info .center-box .input-box :-moz-placeholder {
+          /* Firefox 4 - 18 */
+          color: #a8a8a8;
+          opacity: 1; }
+        .box-right .member-info .center-box .input-box .btn-style {
+          color: #e0a1a1;
+          background-color: firebrick;
+          display: inline-block;
+          padding: 0.5em 1.7em;
+          padding-top: 0.7em;
+          margin-left: 1em;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer; }
+          .box-right .member-info .center-box .input-box .btn-style:hover {
+            background-color: #811717; }
+  .box-right .book-list {
+    display: none;
+    width: 100%;
+    height: 100%; }
+    .box-right .book-list #titleBar {
+      background-color: #f8b04e;
+      color: #faf5ee;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.2em 2em;
+      padding-right: 3em; }
+      .box-right .book-list #titleBar .titlelist {
+        line-height: 2em; }
+      .box-right .book-list #titleBar .titlelist1 {
+        width: 6em; }
+      .box-right .book-list #titleBar .titlelist2 {
+        width: 5em; }
+      .box-right .book-list #titleBar .titlelist3 {
+        width: 10em; }
+      .box-right .book-list #titleBar .titlelist4 {
+        width: 13em; }
+    .box-right .book-list .book-list-box {
+      width: 100%;
+      height: 100%;
+      padding: 1em; }
+      .box-right .book-list .book-list-box .book-info {
+        border-bottom: 0.5px solid #a8a8a8;
+        padding: 1em 2em;
+        padding-top: 2em;
+        justify-content: space-around;
+        display: flex;
+        width: 100%; }
+        .box-right .book-list .book-list-box .book-info .book-name {
+          width: 6em; }
+          .box-right .book-list .book-list-box .book-info .book-name .imgDiv {
+            width: 6em;
+            height: 7em; }
+            .box-right .book-list .book-list-box .book-info .book-name .imgDiv img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
+          .box-right .book-list .book-list-box .book-info .book-name .bname {
+            text-align: center;
+            padding-top: 0.5em; }
+        .box-right .book-list .book-list-box .book-info .book-writer {
+          width: 5em;
+          align-self: baseline; }
+        .box-right .book-list .book-list-box .book-info .book-chapter {
+          width: 10em; }
+          .box-right .book-list .book-list-box .book-info .book-chapter .bchapter .bchap {
+            line-height: 2em; }
+        .box-right .book-list .book-list-box .book-info .book-buyDate {
+          width: 13em; }
+          .box-right .book-list .book-list-box .book-info .book-buyDate .buydate .buyd {
+            line-height: 2em; }
+  .box-right .stored {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1em; }
+    .box-right .stored .stored-h1title {
+      text-align: center;
+      color: #a8a8a8;
+      font-size: 2em;
+      padding-bottom: 1em;
+      border-bottom: 0.5px solid #f8b04e; }
+    .box-right .stored .stored-box {
+      width: 100%;
+      padding: 2em 3em;
+      border-bottom: 0.5px solid #a8a8a8; }
+      .box-right .stored .stored-box .stored-title {
+        justify-content: space-between;
+        display: flex;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        background-color: #a8a8a8;
+        color: #faf5ee; }
+        .box-right .stored .stored-box .stored-title .s-title-style {
+          color: #faf5ee; }
+        .box-right .stored .stored-box .stored-title .s-title1 {
+          width: 4em; }
+        .box-right .stored .stored-box .stored-title .s-title2 {
+          width: 12em; }
+        .box-right .stored .stored-box .stored-title .s-title3 {
+          width: 4em; }
+        .box-right .stored .stored-box .stored-title .s-title4 {
+          width: 10em; }
+      .box-right .stored .stored-box .stored-content {
+        padding-left: 2em; }
+        .box-right .stored .stored-box .stored-content .sMoney {
+          width: 4em; }
+        .box-right .stored .stored-box .stored-content .sCardNo {
+          width: 12em; }
+        .box-right .stored .stored-box .stored-content .sPoint {
+          width: 4em; }
+        .box-right .stored .stored-box .stored-content .sDate {
+          width: 10em; }
+      .box-right .stored .stored-box .stored-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1em;
+        background-color: #f8b04e;
+        margin-bottom: 1em; }
+        .box-right .stored .stored-box .stored-title .s-title-style {
+          color: #faf5ee;
+          font-weight: 500; }
+        .box-right .stored .stored-box .stored-title .s-title5 {
+          width: 16em; }
+        .box-right .stored .stored-box .stored-title .s-title6 {
+          width: 4em; }
+        .box-right .stored .stored-box .stored-title .s-title7 {
+          width: 10em; }
+      .box-right .stored .stored-box .stored-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+        padding-left: 2em; }
+        .box-right .stored .stored-box .stored-content .sDetail {
+          width: 16em;
+          display: flex; }
+          .box-right .stored .stored-box .stored-content .sDetail .sBookName {
+            width: 8em; }
+          .box-right .stored .stored-box .stored-content .sDetail .chap-list {
+            width: 8em; }
+        .box-right .stored .stored-box .stored-content .sCost {
+          width: 4em; }
+        .box-right .stored .stored-box .stored-content .sCostDate {
+          width: 10em; }
+    .box-right .stored .stored-btn {
+      color: #e0a1a1;
+      background-color: firebrick;
+      display: inline-block;
+      width: 100%;
+      display: inline-block;
+      line-height: 3em;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer; }
+      .box-right .stored .stored-btn:hover {
+        background-color: #811717; }
+
+/*# sourceMappingURL=memberArea.css.map */
